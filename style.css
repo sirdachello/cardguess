@@ -1,0 +1,169 @@
+body {
+    background: linear-gradient( rgb(255, 86, 128), orange);
+    height: 100vh;
+}
+
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+    width: 70vw;
+    margin: 10px auto;
+}
+
+.timer {
+    font-size: 4rem;
+    text-align: center;
+}
+.timer.active {
+    font-size: 4rem;
+    text-align: center;
+    animation: resizeTimer 1s infinite;
+}
+
+@keyframes resizeTimer {
+    100% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    0% {transform: scale(1);}
+}
+
+.win-state {
+    font-size: 5rem;
+    position: absolute;
+    color:coral;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0) rotateZ(15deg);
+    z-index: 100;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0), -3px -3px 3px rgb(255, 0, 0);
+    animation: resizeWin 3s infinite;
+    display: none;
+}
+.win-state.visible {
+    display: block;
+}
+
+@keyframes resizeWin {
+    100% {transform: translate(-50%, 0) rotateZ(-15deg) scale(1);}
+    50% {transform: translate(-50%, 0) rotateZ(10deg) scale(1.4);}
+    0%{transform: translate(-50%, 0) rotateZ(-15deg) scale(1);}
+}
+
+.lose-state {
+    font-size: 5rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0) rotateZ(15deg);
+    z-index: 100;
+    text-shadow: 3px 3px 3px red;
+    animation: resize 3s infinite;
+    display: none;
+}
+
+.lose-state.visible {
+    display: block;
+}
+@keyframes resize {
+    100% {transform: translate(-50%, 0) rotateZ(15deg) scale(1);}
+    50% {transform: translate(-50%, 0) rotateZ(-15deg) scale(1.3);}
+    0%{transform: translate(-50%, 0) rotateZ(15deg) scale(1);}
+}
+
+table {
+    margin: 0 auto;
+}
+
+td {
+    height: clamp(3vw, 8vw, 60px);
+    width: clamp(3vw, 8vw, 60px);
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+}
+
+table, span, td, .lose-state, .win-state {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+	cursor: default;
+}
+
+.table-card {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: clamp(3vw, 8vw, 60px);
+    width: clamp(3vw, 8vw, 60px);
+    border-radius: 15%;
+    border: 2px solid black;
+    background: linear-gradient(in lch, rgb(255, 208, 0), red);
+}
+
+.non-clickable {
+    pointer-events: none;
+}
+
+.clicked {
+    animation: removeCard 1s;
+    transform: rotateX(0deg) scale(1);
+    animation-fill-mode: forwards;
+}
+
+.reverting {
+    animation: reverting 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes removeCard {
+    100% { 
+        transform: scale(0);
+    }
+    15% { 
+        transform: scale(1.05);
+    }
+    0% {
+        transform: scale(1);
+    }
+
+}
+@keyframes reverting {
+    100% { 
+        transform: scale(1);
+    }
+    85% { 
+        transform: scale(1.05);
+    }
+    0% {
+        transform: scale(0);
+    }
+
+}
+
+#resetButton {
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(orange, rgb(255, 7, 69));
+    font-size: 1.5rem;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid black;
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        width: 90vw;
+        margin: 10px auto;
+    }
+    td {
+        height: clamp(3vw, 8vw, 60px);
+        width: clamp(3vw, 8vw, 60px);
+        font-size: 1rem;
+    }
+    .table-card {
+        height: clamp(3vw, 8vw, 60px);
+        width: clamp(3vw, 8vw, 60px);
+    }
+}

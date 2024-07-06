@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Guess a card!</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div id="lose-state" class="lose-state">You lost!</div>
+        <div id="win-state" class="win-state">You win!</div>
+        <div id="timer" class="timer">30</div>
+    <table id="table">
+        <tr>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+            <td>
+                <div class="table-card"></div>
+            </td>
+        </tr>
+    </table>
+    <button type="button" id="resetButton">Reset Game Field</button>
+</div>
+</body>
+</html>
